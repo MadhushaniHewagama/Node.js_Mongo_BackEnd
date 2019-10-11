@@ -57,4 +57,19 @@ npm install --save body-parser
         503 - Service Unavailable
         504 - Gateway Timeout
         505 - HTTP version not supported
-CORS(Cross-Origin Resource Sharing)
+## CORS(Cross-Origin Resource Sharing)
+    3 ways of fix the CORS Error
+    #01 install the Allow-Control-Allow-Origin plugin - this is good solution for local machine and not good enough when publish
+    #02 send your request to a proxy
+    #03 build your own proxy
+
+###### Summary
+
+# The listener passed as an argument to createServer() will receive the request and response objects as arguments, generally shortened to  req  and  res .  The  next  function only exists within an Express app, and the listener does not receive any environment variables as arguments.
+# The final middleware in a chain must send the response back to the client to prevent the request from timing out.
+# A piece of middleware calls the next function when it needs to pass execution on to the next piece of middleware in the chain.
+# A 200 HTTP status code is the standard code for a successful request, especially in a GET request.
+# A 201 status generally means that the request has been fulfilled, resulting in the creation of a new resource.
+# CORS security is a default security measure to prevent resources from being used by unauthorised origins.
+# Setting these headers allows requests to be sent and received with no CORS security errors.
+# When an HTTP request is received by the server, its body is not generally in an easily usable form.  The body-parser package parses the request body and formats it to make it easier to use.
