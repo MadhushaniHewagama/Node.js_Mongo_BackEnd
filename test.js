@@ -10,6 +10,15 @@ This Express app contains four pieces of middleware:
 
         *the final piece of middleware logs "Response sent successfully" to the console
 */
+/*
+  Middleware functions can perform the following tasks:
+
+  Execute any code.
+  Make changes to the request and the response objects.
+  End the request-response cycle.
+  Call the next middleware in the stack
+*/
+
 const express = require('express');
 
 const test = express();
