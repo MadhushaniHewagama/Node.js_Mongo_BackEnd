@@ -73,3 +73,8 @@ npm install --save body-parser
 # CORS security is a default security measure to prevent resources from being used by unauthorised origins.
 # Setting these headers allows requests to be sent and received with no CORS security errors.
 # When an HTTP request is received by the server, its body is not generally in an easily usable form.  The body-parser package parses the request body and formats it to make it easier to use.
+
+## Create cluster in mongodb atlas 
+
+## Install mongoose package
+npm install --save mongoose
