@@ -78,3 +78,4 @@ npm install --save body-parser
 
 ## Install mongoose package
 npm install --save mongoose
+***One of the advantages of using Mongoose to manage our MongoDB database is that we can implement strict data schemas to make our app more robust. 
