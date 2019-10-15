@@ -139,3 +139,28 @@ npm install --save jsonwebtoken
 
 # install multer package which allows us to handle incoming files in HTTP requests
 npm install --save multer
+
+## Modify routes to take files into account
+
+## Backend delete function
+
+######################### Final Summary
+    * Node server
+    *Express app
+    *MongoDB database
+    *RESTful API
+    *C.R.U.D
+    *Token-based authentication
+    *File-handling operations
+
+
+#### Final Quiz summary
+
+# The multer package needs to know the destination for the file and the desired filename
+# The  multer  package exposes the  req.file  object.
+# To build the base URL for files on our server, we need the protocol (  http  or  https  , for example), the  '://'  string segment, and then the request host, i.e. where the original request was sent. 
+# Using the built-in  path  package and Express'  static  method, we can serve up static resources such as images.
+# The incoming data is in form-data format, and the object sent by the front end has been stringified.  We therefore need to use  JSON.parse()  to turn it into a usable JavaScript object.
+# The  unlink  function allows us to delete files from the filesystem.
+# We need to use a file's MIME type to determine its format, and thereby derive its extension.
+#  If  multer  is registered before authentication middleware, the file will be saved before the server gets a chance to check the user's authentication.  In these situations, always register  multer  after any authentication middleware.
