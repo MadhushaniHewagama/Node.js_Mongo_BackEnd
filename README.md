@@ -8,6 +8,12 @@ npm install --save express
 ###### To handle the POST request coming from the front-end app,
 npm install --save body-parser
 
+###### CRUD 
+    Create
+    Read
+    Update
+    Delete
+
 #### Quiz 01
 
 ## HTTP - status codes
@@ -78,4 +84,14 @@ npm install --save body-parser
 
 ## Install mongoose package
 npm install --save mongoose
-***One of the advantages of using Mongoose to manage our MongoDB database is that we can implement strict data schemas to make our app more robust. 
+***One of the advantages of using Mongoose to manage our MongoDB database is that we can implement strict data schemas to make our app more robust.
+
+
+######  Database for authentication info
+
+# in database dont store password as plain text, store them as a hash or encrypted string.
+# encryption package -> bcrypt (is a password hashing function, based on the Blowfish cipher)
+# Rainbow table is a precomputed table for reversing cryptographic hash funchition.(usually use for recovering a password or credit card numbers, more stroger than brute force attack and use less computer processing time)
+
+##### Installing a validation package to pre-validate information before saving 
+npm install --save mongoose-unique-validator
