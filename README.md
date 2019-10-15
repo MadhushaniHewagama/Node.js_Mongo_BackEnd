@@ -136,3 +136,6 @@ npm install --save jsonwebtoken
 # While there is no absolute rule, most APIs require that authenticated requests place their token in their Authorization header.
 
 ## Accept incomin files with multer
+
+# install multer package which allows us to handle incoming files in HTTP requests
+npm install --save multer
