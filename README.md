@@ -95,3 +95,6 @@ npm install --save mongoose
 
 ##### Installing a validation package to pre-validate information before saving 
 npm install --save mongoose-unique-validator
+
+##### Install bcrypt ackage for  signup function
+npm install --save bcrypt
