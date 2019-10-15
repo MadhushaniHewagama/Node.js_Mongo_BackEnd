@@ -98,3 +98,11 @@ npm install --save mongoose-unique-validator
 
 ##### Install bcrypt ackage for  signup function
 npm install --save bcrypt
+
+#### Create authentication token
+Token based authentication using -> JWT Json Web Token
+
+# create and verify authentication tokens
+npm install --save jsonwebtoken
+
+# In chrome DevTool Network tab to chack -> Authorization header ---> Bearer and a long encoded strig is the token

@@ -1,5 +1,6 @@
 const bcrypt = require('bcrypt');
 const User = require('../models/user');
+const jwt = require('jsonwebtoken');
 
 exports.signup = (req, res, next) => {
     //call bcrypt's hash function on our pwd and ask it to salt the pwd 10 times
@@ -30,7 +31,6 @@ exports.signup = (req, res, next) => {
     User.findOne({ email: req.body.email }).then(
       (user) => {
         if (!user) {
-            //status 401 for unauthorized error
           return res.status(401).json({
             error: new Error('User not found!')
           });
@@ -42,10 +42,14 @@ exports.signup = (req, res, next) => {
                 error: new Error('Incorrect password!')
               });
             }
+            //Keep user ID as a payload
+            const token = jwt.sign(
+              { userId: user._id },
+              'RANDOM_TOKEN_SECRET',
+              { expiresIn: '24h' });
             res.status(200).json({
               userId: user._id,
-              //now generic string
-              token: 'token'
+              token: token
             });
           }
         ).catch(
