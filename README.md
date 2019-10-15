@@ -106,3 +106,5 @@ Token based authentication using -> JWT Json Web Token
 npm install --save jsonwebtoken
 
 # In chrome DevTool Network tab to chack -> Authorization header ---> Bearer and a long encoded strig is the token
+
+#### Set up authentication middleware
