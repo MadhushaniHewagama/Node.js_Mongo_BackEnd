@@ -13,8 +13,8 @@ npm install --save body-parser
     Read
     Update
     Delete
-
-#### Quiz 01
+#################################################################################################################################
+#### Quiz 01 Summary
 
 ## HTTP - status codes
     1## - Informational (request has been received and the process is continuing)
@@ -69,8 +69,6 @@ npm install --save body-parser
     #02 send your request to a proxy
     #03 build your own proxy
 
-###### Summary
-
 # The listener passed as an argument to createServer() will receive the request and response objects as arguments, generally shortened to  req  and  res .  The  next  function only exists within an Express app, and the listener does not receive any environment variables as arguments.
 # The final middleware in a chain must send the response back to the client to prevent the request from timing out.
 # A piece of middleware calls the next function when it needs to pass execution on to the next piece of middleware in the chain.
@@ -90,21 +88,51 @@ npm install --save mongoose
 ######  Database for authentication info
 
 # in database dont store password as plain text, store them as a hash or encrypted string.
-# encryption package -> bcrypt (is a password hashing function, based on the Blowfish cipher)
+
 # Rainbow table is a precomputed table for reversing cryptographic hash funchition.(usually use for recovering a password or credit card numbers, more stroger than brute force attack and use less computer processing time)
 
 ##### Installing a validation package to pre-validate information before saving 
 npm install --save mongoose-unique-validator
+
+# encryption package -> bcrypt 
+                               --> * is a password hashing function, based on the Blowfish symmetric block cipher
+                               --> * brust force attacks slower and minimize the impact
+                               --> use technique called Key Stretching
+                               --> one way
+
 
 ##### Install bcrypt ackage for  signup function
 npm install --save bcrypt
 
 #### Create authentication token
 Token based authentication using -> JWT Json Web Token
+# Libraries
+        --> Python - pyjwt
+        --> Node.js - jsonwebtoken 
+        --> Java - java-jwt
+        --> Ruby - ruby-jwt
+        --> Go- jwt-go
 
 # create and verify authentication tokens
 npm install --save jsonwebtoken
 
-# In chrome DevTool Network tab to chack -> Authorization header ---> Bearer and a long encoded strig is the token
+# In chrome DevTool Network tab to chack 
+                                    --> Authorization header 
+                                    --> "Bearer" and a long encoded strig is the token
 
 #### Set up authentication middleware
+#################################################################################################################################
+###### Quiz 02  Summary
+# Controllers contain the business logic, and are generally imported by routers which attribute that logic to specific routes.
+# It is never safe to store unencrypted passwords, no matter how protected the database itself may be.  You never know what could cause data to leak, and give open access to user passwords.
+# The bcrypt package allows for secure string encryption using a one-way algorithm.
+# It is virtually impossible to calculate the original string from a bcrypt hash, but the bcrypt package can compare two hashes and easily tell if they were both produced by the same original string (see P vs NP problem for more information on the mathematics behind this).
+# JSON web tokens are encoded, not encrypted, strings which can be decoded as long as you know the secret string.
+# You can set an expiration delay for JSON web tokens, rendering them invalid after a given time.
+# JSON web tokens are secure because: 
+                                  --> There is no session stored on the server which can be hijacked.
+                                  --> Their encoded payload can include data to help confirm that the client sending the request is indeed who they claim to be (using user IDs for example).
+                                  --> They are virtually impossible to forge without prior knowledge of the secret string used to sign them.
+# While there is no absolute rule, most APIs require that authenticated requests place their token in their Authorization header.
+
+## Accept incomin files with multer
